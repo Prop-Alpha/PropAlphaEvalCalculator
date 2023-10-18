@@ -1,0 +1,6 @@
+# ignore everything
+*
+
+# but not these files
+!.gitignore
+!eval_calc.py
