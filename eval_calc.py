@@ -289,6 +289,13 @@ class WinLossDiGraph:
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # we have a trailing dd amount
+    print("Estimate odds of passing a prop eval with trailing drawdown \n"
+          "given a single setup with a defined bracket and win percentage.\n"
+          "Costs ignored. \n"
+          "NOT FINANCIAL ADVICE. \n"
+          "DO YOUR OWN RESEARCH. \n"
+          "NO GUARANTEE OUR MATH IS CORRECT. \n"
+          "RISK DISCLAIMER: https://www.prop-alpha.com/disclaimer")
     while True:
         # main program
         trailing_dd = float(input("Enter Trailing Drawdown Amount in Currency: "))
