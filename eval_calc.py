@@ -1,5 +1,6 @@
 # borrowing heavily from question/answer here:
 # https://codereview.stackexchange.com/questions/124449/simple-weighted-directed-graph-in-python
+import math
 from pprint import pprint
 import numpy as np
 
@@ -305,9 +306,9 @@ if __name__ == '__main__':
         stop_width = float(input("Enter Stop Size in Currency: "))
         tp_width = float(input("Enter Take Profit Size in Currency: "))
         win_pct = float(input("Enter Estimated Win Percent: "))
-        num_loss = trailing_dd / stop_width
-        num_win = account_target / stop_width
-        rr_ratio = tp_width / stop_width
+        num_loss = math.ceil(trailing_dd / stop_width)
+        num_win = math.ceil(account_target / stop_width)
+        rr_ratio = round(tp_width / stop_width, 1)
         win_frac = win_pct/100.0
         wldg = WinLossDiGraph()
         wldg.build_graph_from_start_node_and_params(win_frac, rr_ratio, num_win, num_loss)
